@@ -1,0 +1,31 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.hazetech.online" }],
+      "destination": "https://hazetech.online/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/demo/primenest/:path*",
+      "has": [{ "type": "host", "value": "hazetech.online" }],
+      "destination": "https://demo.hazetech.online/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/demo/primenest/:path*",
+      "has": [{ "type": "host", "value": "demo.hazetech.online" }],
+      "destination": "/:path*",
+      "permanent": false
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "demo.hazetech.online" }],
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, follow" }]
+    }
+  ],
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+}
