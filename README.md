@@ -8,7 +8,7 @@ Fonts (Inter and Manrope) are bundled through Fontsource.
 Built and tested with Node 24. Use a current Node LTS release.
 
 ```powershell
-cd "C:\Users\harry\Desktop\My Portfolio"
+cd "C:\Users\harry\Desktop\haze_portfolio"
 ```
 
 ```powershell
