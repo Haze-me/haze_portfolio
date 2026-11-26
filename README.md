@@ -117,8 +117,9 @@ change `imageUrl` in `src/data/demo/images.js`. Never present them as real stock
 Graph tags, so link previews work without JavaScript. The page **body** is still rendered by
 JavaScript. Demo pages are `noindex`, and Vercel also sends a noindex header on the demo address.
 
-Known limit: a shared link to the **root** of `demo.hazetech.online` may preview with HazeTech's
-title and image, because the same `index.html` serves both addresses. Visitors still see PrimeNest.
+Known limit: before JavaScript runs, addresses on `demo.hazetech.online` receive portfolio HTML. The
+root, `/about`, `/services`, `/contact` and `/properties` carry HazeTech titles and canonical links, so
+shared links can preview as the portfolio. Visitors still see PrimeNest once the page loads.
 
-`vercel.json` handles clean addresses and redirects. It has not been tested on a live deployment.
+`vercel.json` handles clean addresses and redirects. 
 Unknown addresses show the in-app 404 page but return HTTP 200.

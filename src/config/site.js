@@ -19,7 +19,7 @@ export const site = {
   url: 'https://hazetech.online',
   demoUrl: 'https://demo.hazetech.online',
 
-  email: 'harrisonaka29@gmail.com',
+  email: 'hello@hazetech.online',
   phone: '+234 806 966 8882', // as displayed
   // WhatsApp numbers: digits only, starting with the country code, with no "+"
   // or leading 0 (Nigeria: 234, then the number without its first 0).
