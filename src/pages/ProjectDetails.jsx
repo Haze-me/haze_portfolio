@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { getProject, projects } from '../data/projects.js';
 import { getService } from '../data/services.js';
 import { pageMeta } from '../data/seo.js';
@@ -43,6 +43,12 @@ function Details({ project }) {
           <aside className="h-fit rounded-2xl border border-line p-6 shadow-card">
             <h2 className="text-lg font-bold text-navy-900">Technology stack</h2>
             <TechList items={project.technologies} className="mt-4" />
+            {project.liveUrl && (
+              <Button href={project.liveUrl} variant="dark" className="mt-5 w-full">
+                View live demo <ExternalLink className="size-4" aria-hidden="true" />
+                <span className="sr-only">(opens in a new tab)</span>
+              </Button>
+            )}
             {service && (
               <>
                 <h2 className="mt-7 text-lg font-bold text-navy-900">Related service</h2>

@@ -3,6 +3,8 @@
 //         (about 16:10; '' shows a placeholder)
 //  badge: optional label, e.g. to mark a concept that is not a client project
 //  notes: sections shown under the Overview: [{ heading: 'My role: ...', body: '...' }]
+//  liveUrl: optional; adds a "View live demo" link. Only use an address that works.
+//  Order matters: the home page shows the first three.
 export const projects = [
   {
     slug: 'event-giveaway-app',
@@ -37,6 +39,25 @@ export const projects = [
       },
     ],
     relatedService: 'backend-api-development',
+  },
+  {
+    slug: 'apex-engineering',
+    name: 'Apex Engineering & Construction',
+    subtitle: 'Civil Engineering Website',
+    category: 'Concept project',
+    badge: 'Demo concept · not a real client',
+    description:
+      'A concept website for a civil engineering and construction company in Nigeria and West Africa, presenting its services, projects and approach, with a clear way to request a consultation.',
+    technologies: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'React Router'],
+    image: '/projects/apex-engineering.png',
+    liveUrl: 'https://civil.hazetech.online',
+    notes: [
+      {
+        heading: 'My role: Frontend Developer',
+        body: 'I built this concept website with React, Vite and Tailwind CSS, with responsive, separate pages that present the company and guide visitors to request a consultation.',
+      },
+    ],
+    relatedService: 'business-website-development',
   },
   {
     slug: 'brightpath-tutors',

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 import ProjectThumbnail from './ProjectThumbnail.jsx';
 import TechList from './TechList.jsx';
 
@@ -16,7 +16,7 @@ export default function ProjectCard({ project, headingLevel: Heading = 'h3' }) {
         )}
         <p className="mt-3 text-muted">{project.description}</p>
         <TechList items={project.technologies} className="mt-4" />
-        <div className="mt-auto pt-6">
+        <div className="mt-auto flex flex-wrap items-center gap-x-6 pt-6">
           <Link
             to={`/projects/${project.slug}`}
             className="inline-flex min-h-11 items-center gap-2 font-semibold text-accent-700 hover:underline"
@@ -24,6 +24,17 @@ export default function ProjectCard({ project, headingLevel: Heading = 'h3' }) {
             Project details <span className="sr-only">for {project.name}</span>
             <ArrowRight className="size-4" aria-hidden="true" />
           </Link>
+          {project.liveUrl && (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-11 items-center gap-2 font-semibold text-navy-900 hover:underline"
+            >
+              View live demo <span className="sr-only">of {project.name} (opens in a new tab)</span>
+              <ExternalLink className="size-4" aria-hidden="true" />
+            </a>
+          )}
         </div>
       </div>
     </article>
